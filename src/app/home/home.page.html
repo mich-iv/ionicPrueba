@@ -1,10 +1,30 @@
-<ion-header [translucent]="true">
+<!--
+  <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Prueba
     </ion-title>
   </ion-toolbar>
 </ion-header>
+-->
+<ion-menu side="start" menuId="primerMenu" contentId="main">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>Item 1</ion-item>
+      <ion-item>Item 2</ion-item>
+      <ion-item>Item 3</ion-item>
+      <ion-item>Item 4</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-router-outlet id="main"></ion-router-outlet>
+
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
@@ -14,7 +34,17 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-button shape="outline" color="success" size="large">Hola</ion-button>
+    <div></div>
+    <strong>holi jajkas</strong>
+    <p>Texto de prueba</p>
+    <ion-button color="success">
+      <ion-icon slot="start" name="home"></ion-icon>
+      0:
+    </ion-button>
+    
+    <ion-input type="text" text-right maxLength="10" placeholder="Introducir texto" [(ngModel)]="variable" (ionChange)="refresh()"></ion-input>
+    <ion-badge>{{ variable1 }}</ion-badge>
+    
   </div>
 </ion-content>
